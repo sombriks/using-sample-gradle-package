@@ -40,8 +40,14 @@ Create the environment variables `GITHUB_ACTOR` and `GITHUB_TOKEN` with your
 github credentials and make it available for gradle
 
 Those variables are created by github itself to be used in actions but locally
-it's up to you to proper create it.
+it's up to you to create it.
 
 You can create your github token on this url:
 
 - <https://github.com/settings/tokens/new>
+
+You can test if credentials are working fine with the following command
+
+```kotlin
+./gradlew :app:build --refresh-dependencies
+```

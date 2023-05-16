@@ -25,6 +25,8 @@ replay_pid*
 
 # Ignore Gradle project-specific cache directory
 .gradle
+# wrapper jar IS supposed to be versioned
+!gradle/wrapper/gradle-wrapper.jar
 
 # Ignore Gradle build output directory
 build
