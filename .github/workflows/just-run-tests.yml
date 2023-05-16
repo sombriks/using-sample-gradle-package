@@ -19,5 +19,5 @@ jobs:
         with:
           arguments: build
         env:
-          MY_USERNAME: ${{ secretes.MY_USERNAME }}
-          MY_TOKEN: ${{ secretes.MY_TOKEN }}
+          MY_USERNAME: ${{ secrets.MY_USERNAME }}
+          MY_TOKEN: ${{ secrets.MY_TOKEN }}
