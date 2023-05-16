@@ -37,7 +37,7 @@ dependencies {
     // This dependency is used by the application.
     implementation("com.google.guava:guava:31.1-jre")
 
-    implementation("sample.gradle.mylibrary:lib:0.1.2-SNAPSHOT")
+    implementation("sample.gradle.mylibrary:lib:0.1.4")
 }
 
 application {

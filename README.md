@@ -24,8 +24,6 @@ repositories {
 //...
 ```
 
-NOTE: for packages from private projects you must provide valid credentials (i.e. access to the private project)
-
 Add the dependency
 
 ```kotlin
@@ -38,11 +36,8 @@ dependencies {
 //...
 ```
 
-Create the environment variables `GITHUB_ACTOR` and `GITHUB_TOKEN` with your
-github credentials and make it available for gradle
-
-Those variables are created by github itself to be used in actions but locally
-it's up to you to create it.
+Create the environment variables `MY_USERNAME` and `MY_TOKEN` with your
+github credentials and make it available for gradle.
 
 You can create your github token on this url:
 
@@ -50,6 +45,11 @@ You can create your github token on this url:
 
 You can test if credentials are working fine with the following command
 
-```kotlin
-./gradlew :app:build-- refresh -dependencies
+```bash
+# make sure MY_USERNAME and MY_TOKEN are present as environment variables
+./gradlew :app:build --refresh-dependencies
 ```
+
+if you have any github actions then those variables must be set on them in
+order to proper build the project. create them as
+[github secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#accessing-your-secrets).
