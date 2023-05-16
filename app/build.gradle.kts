@@ -21,8 +21,8 @@ repositories {
         name = "GitHubPackages"
         url = uri("https://maven.pkg.github.com/sombriks/sample-gradle-package")
         credentials {
-            username = System.getenv("GITHUB_ACTOR")
-            password = System.getenv("GITHUB_TOKEN")
+            username = System.getenv("MY_USERNAME")
+            password = System.getenv("MY_TOKEN")
         }
     }
 }

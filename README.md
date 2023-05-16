@@ -16,13 +16,15 @@ repositories {
         name = "GitHubPackages"
         url = uri("https://maven.pkg.github.com/sombriks/sample-gradle-package")
         credentials {
-            username = System.getenv("GITHUB_ACTOR")
-            password = System.getenv("GITHUB_TOKEN")
+            username = System.getenv("MY_USERNAME")
+            password = System.getenv("MY_TOKEN")
         }
     }
 }
 //...
 ```
+
+NOTE: for packages from private projects you must provide valid credentials (i.e. access to the private project)
 
 Add the dependency
 
@@ -49,5 +51,5 @@ You can create your github token on this url:
 You can test if credentials are working fine with the following command
 
 ```kotlin
-./gradlew :app:build --refresh-dependencies
+./gradlew :app:build-- refresh -dependencies
 ```
